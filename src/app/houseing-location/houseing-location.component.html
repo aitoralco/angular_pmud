@@ -1,4 +1,4 @@
-<section class="listing">
+<section class="listing" routerLink>
     <img
       class="listing-photo"
       [src]="housingLocation.photo"
@@ -7,4 +7,5 @@
     />
     <h2 class="listing-heading">{{ housingLocation.name }}</h2>
     <p class="listing-location">{{ housingLocation.city }}, {{ housingLocation.state }}</p>
-</section>
+    <a [routerLink]="['/details',housingLocation.id]">More details</a>
+  </section>
