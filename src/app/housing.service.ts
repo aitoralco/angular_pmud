@@ -12,8 +12,11 @@ export class HousingService {
     return this.housingLocationList;
   }
 
-  getHousingLocationByID(id: number): Housinglocation | undefined {
-    return this.housingLocationList.find((housingLocation) => housingLocation.id === id);
+  getHousingLocationByID(id: number): 
+    Housinglocation | undefined {
+    return this.housingLocationList
+      .find((housingLocation) => housingLocation
+        .id === id);
   }
 
   readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common';
